@@ -7,7 +7,43 @@
     <link rel="stylesheet" href="./css/normalize.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
+  <body class="pattern-grid-lg">
+    <header>
+      <span class="header-title">Morse Code</span>
+      <span class="header-sub-title">Translator</span>
+    </header>
+    <main>
+      <div class="main-content">
+        <div class="english">
+          <div class="title-english">English</div>
+          <div class="translate-english">
+            <textarea
+              placeholder="Enter text here..."
+              name="english"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <button>Translate</button>
+          </div>
+        </div>
+        <div class="middle-col">
+          <div class="reverse-btn">&#8652;</div>
+        </div>
+        <div class="morse">
+          <div class="title-morse">Morse Code</div>
+          <div class="translate-morse">
+            <textarea
+              placeholder="Translated text here."
+              name="morse"
+              cols="30"
+              rows="10"
+              readonly
+            ></textarea>
+            <button>Copy</button>
+          </div>
+        </div>
+      </div>
+    </main>
     <script src="./js/main.js"></script>
   </body>
 </html>
