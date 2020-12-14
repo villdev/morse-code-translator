@@ -10,10 +10,14 @@ const playBtn = document.querySelector(".play-btn");
 const copyBtn = document.querySelector(".copy-btn");
 const morseOutput = document.querySelector(".translate-morse textarea");
 const audioElement = document.querySelector("audio");
+const loader = document.querySelector(".loader-bcg");
+const revBtn = document.querySelector(".reverse-btn");
 
 translateBtn.addEventListener("click", (e) => {
   const engQuery = engInput.value;
   const endpoint = serverUrlEng + engQuery;
+  loader.style.display = "flex";
+  revBtn.style.display = "none";
   fetch(endpoint)
     .then((res) => {
       if (!res.ok) throw Error(res.statusText);
@@ -32,6 +36,8 @@ translateBtn.addEventListener("click", (e) => {
       return res.json();
     })
     .then((json) => {
+      loader.style.display = "none";
+      revBtn.style.display = "block";
       const audioSrc = json.contents.translated.audio;
       audioElement.src = audioSrc;
     })
