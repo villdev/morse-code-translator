@@ -26,6 +26,7 @@ translateBtn.addEventListener("click", (e) => {
     .then((json) => {
       const morse = json.contents.translated;
       //   morseOutput.style.fontWeight = "600";
+      morseOutput.focus();
       morseOutput.value = morse;
     })
     .catch((err) => console.log(err));
