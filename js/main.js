@@ -1,9 +1,9 @@
 const serverUrlEng =
   "https://api.funtranslations.com/translate/morse.json?text=";
-const serverUrlMorse =
-  "http://api.funtranslations.com/translate/morse2english.json?speed=30%20WPM&text=";
+// const serverUrlMorse =
+//   "https://api.funtranslations.com/translate/morse2english.json?speed=30%20WPM&text=";
 const serverUrlEngAudio =
-  "http://api.funtranslations.com/translate/morse/audio.json?text=";
+  "https://api.funtranslations.com/translate/morse/audio.json?text=";
 const engInput = document.querySelector(".translate-english textarea");
 const translateBtn = document.querySelector(".translate-btn");
 const playBtn = document.querySelector(".play-btn");
@@ -38,7 +38,7 @@ translateBtn.addEventListener("click", (e) => {
     })
     .then((json) => {
       loader.style.display = "none";
-      revBtn.style.display = "block";
+      revBtn.style.display = "flex";
       const audioSrc = json.contents.translated.audio;
       audioElement.src = audioSrc;
     })
