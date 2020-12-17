@@ -12,4 +12,4 @@ Clone the repository or download it as zip.
 
 ![Demo 1 Morse Code App](./images/demo1.jpg)
 
-Online demo available at [minionese](https://eng-morse.netlify.app/).
+Online demo available at [eng-morse](https://eng-morse.netlify.app/).
